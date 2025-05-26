@@ -1,0 +1,166 @@
+/* أنماط أساسية للتطبيق */
+:root {
+  --primary-color: #ec4899;
+  --primary-dark: #be185d;
+  --text-light: #f9fafb;
+  --text-dark: #1f2937;
+  --bg-light: #ffffff;
+  --bg-dark: #1f2937;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
+
+/* أنماط فقاعات المحادثة */
+.chat-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.message-bubble {
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.user-message {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  margin-left: auto;
+  border-bottom-right-radius: 0;
+}
+
+.ai-message {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  margin-right: auto;
+  border-bottom-left-radius: 0;
+}
+
+/* تحسين مظهر الصور في المحادثة */
+.message-image {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* تحريكات للنافذة المنبثقة */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+/* أنماط مربع الإدخال */
+.input-container {
+  display: flex;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-top: 1px solid #e5e7eb;
+}
+
+.input-box {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid #d1d5db;
+  outline: none;
+}
+
+.input-box:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.3);
+}
+
+.send-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.75rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* أنماط الوضع المظلم */
+.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.dark-mode .ai-message {
+  background-color: #374151;
+  color: var(--text-light);
+}
+
+.dark-mode .input-container {
+  background-color: rgba(31, 41, 55, 0.8);
+  border-top-color: #4b5563;
+}
+
+.dark-mode .input-box {
+  background-color: #374151;
+  color: var(--text-light);
+  border-color: #4b5563;
+}
+
+/* أنماط شريط التمرير */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e7eb;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+.dark-mode ::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+  background: #6b7280;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}

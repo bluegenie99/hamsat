@@ -1,0 +1,73 @@
+/* استيراد الأنماط الأساسية من Tailwind */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* تخصيص المظهر العام للتطبيق */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  direction: rtl;
+}
+
+/* تخصيص شريط التمرير */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #2D3748; /* مسار داكن */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #718096; /* لون رمادي للشريط */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A0AEC0; /* لون رمادي فاتح عند التحويم */
+}
+
+/* تحسينات إضافية للواجهة */
+.rtl {
+  direction: rtl;
+}
+
+.rtl-space-x-reverse {
+  --tw-space-x-reverse: 1;
+}
+
+/* تحسين مظهر فقاعات المحادثة */
+.message-bubble {
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+/* تحسين مظهر الصور في المحادثة */
+.message-image {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.message-image:hover {
+  transform: scale(1.02);
+}
+
+/* تحسين مظهر أزرار التحكم */
+.control-button {
+  transition: all 0.2s ease;
+}
+
+.control-button:hover {
+  transform: translateY(-2px);
+}
+
+/* تحسين مظهر مربع الإدخال */
+.input-box {
+  border-radius: 9999px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-box:focus {
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.3);
+}
