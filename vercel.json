@@ -1,13 +1,8 @@
 {
-  "framework": "vite",
   "buildCommand": "npm run vercel-build",
-  "installCommand": "npm install",
   "outputDirectory": "dist",
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "env": {
     "VITE_API_KEY": "@VITE_API_KEY"
