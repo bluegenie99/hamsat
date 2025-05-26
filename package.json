@@ -1,11 +1,11 @@
 {
-  "name": "hamsat---همسات",
+  "name": "hamsat---\u0647\u0645\u0633\u0627\u062a",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm install && tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },

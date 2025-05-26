@@ -1,6 +1,6 @@
 {
   "framework": "vite",
-  "buildCommand": "npm install && npm run build",
+  "buildCommand": "npm run build",
   "installCommand": "npm install",
   "outputDirectory": "dist",
   "rewrites": [
@@ -10,6 +10,6 @@
     }
   ],
   "env": {
-    "API_KEY": "@api_key"
+    "VITE_API_KEY": "@VITE_API_KEY"
   }
 }
